@@ -1,0 +1,7 @@
+CRITICAL - 2023-04-01 07:27:19 --> Undefined variable $firstName
+in APPPATH/Controllers/Register.php on line 36.
+ 1 APPPATH/Controllers/Register.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->save()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

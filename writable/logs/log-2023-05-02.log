@@ -1,0 +1,44 @@
+ERROR - 2023-05-02 05:02:31 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-02 05:02:31 --> 
+hello: 220 mailhub.eait.uq.edu.au ESMTP Sendmail 8.15.1/8.15.1; Tue, 2 May 2023 15:02:31 +1000 (AEST)
+
+The following SMTP error was encountered: 220 mailhub.eait.uq.edu.au ESMTP Sendmail 8.15.1/8.15.1; Tue, 2 May 2023 15:02:31 +1000 (AEST)
+
+CRITICAL - 2023-05-02 05:04:14 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 137.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH/Controllers/Offer.php(32): CodeIgniter\HTTP\Files\UploadedFile->move()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Offer->add_offer()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 11:55:11 --> Class "App\Controllers\OfferModel" not found
+in APPPATH/Controllers/Dashboard.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 11:55:24 --> Cannot use object of type stdClass as array
+in APPPATH/Views/dashboard.php on line 6.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Dashboard.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 11:56:44 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::fillAll()
+in APPPATH/Models/OfferModel.php on line 30.
+ 1 APPPATH/Controllers/Dashboard.php(15): App\Models\OfferModel->getAllOffers()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 11:56:51 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH/Models/OfferModel.php on line 30.
+ 1 APPPATH/Controllers/Dashboard.php(15): App\Models\OfferModel->getAllOffers()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

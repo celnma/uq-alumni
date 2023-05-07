@@ -1,0 +1,6 @@
+CRITICAL - 2023-04-17 07:23:03 --> Call to a member function checkUser() on null
+in APPPATH/Controllers/Login.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->check_login()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,348 @@
+CRITICAL - 2023-04-27 00:15:19 --> Call to undefined method CodeIgniter\Email\Email::setSender()
+in APPPATH/Controllers/Register.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->save()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 07:49:50 --> Undefined variable $primaryKey
+in APPPATH/Models/UserModel.php on line 104.
+ 1 APPPATH/Models/UserModel.php(104): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Login.php(23): App\Models\UserModel->checkActivation()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->check_login()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 07:52:06 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH/Models/UserModel.php on line 61.
+ 1 APPPATH/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 07:53:27 --> Call to undefined method stdClass::num_row()
+in APPPATH/Models/UserModel.php on line 64.
+ 1 APPPATH/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-27 07:56:04 --> mysqli_sql_exception: Unknown column 'active' in 'where clause' in /var/www/htdocs/alumni/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/htdocs/alumni/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/htdocs/alumni/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/htdocs/alumni/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/htdocs/alumni/system/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/htdocs/alumni/app/Models/UserModel.php(69): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/htdocs/alumni/app/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+#6 /var/www/htdocs/alumni/system/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+#7 /var/www/htdocs/alumni/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/htdocs/alumni/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/htdocs/alumni/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-27 07:56:04 --> Unknown column 'active' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/UserModel.php(69): CodeIgniter\Database\BaseBuilder->update()
+ 3 APPPATH/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-27 07:56:31 --> mysqli_sql_exception: Unknown column 'users' in 'field list' in /var/www/htdocs/alumni/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/htdocs/alumni/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/htdocs/alumni/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/htdocs/alumni/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/htdocs/alumni/system/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/htdocs/alumni/app/Models/UserModel.php(69): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/htdocs/alumni/app/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+#6 /var/www/htdocs/alumni/system/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+#7 /var/www/htdocs/alumni/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/htdocs/alumni/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/htdocs/alumni/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-27 07:56:31 --> Unknown column 'users' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/UserModel.php(69): CodeIgniter\Database\BaseBuilder->update()
+ 3 APPPATH/Controllers/Register.php(74): App\Models\UserModel->activateUser()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-27 15:20:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-04-27 15:20:14 --> 220 mailhub.eait.uq.edu.au ESMTP Sendmail 8.15.1/8.15.1; Fri, 28 Apr 2023 01:20:09 +1000 (AEST)
+
+hello: 250-mailhub.eait.uq.edu.au Hello infs3202-7400d429.zones.eait.uq.edu.au [172.23.81.49], pleased to meet you
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-8BITMIME
+250-SIZE 67108864
+250-DSN
+250-ETRN
+250-STARTTLS
+250-DELIVERBY
+250 HELP
+
+from: 250 2.1.0 <celine.ma@uq.net.au>... Sender ok
+
+to: 250 2.1.5 <m.celie17@gmail.com>... Recipient ok
+
+data: 354 Enter mail, end with "." on a line by itself
+
+
+quit: 250 2.0.0 33RFK9F0026672 Message accepted for delivery
+
+The following SMTP error was encountered: 250 2.0.0 33RFK9F0026672 Message accepted for delivery
+
+The following SMTP error was encountered: 
+CRITICAL - 2023-04-27 15:22:28 --> Undefined variable $messageTitle
+in APPPATH/Views/template/message.php on line 9.
+ 1 APPPATH/Views/template/message.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Register.php(84): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Register->activate_account()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:27:17 --> Undefined constant "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Career.php(19): view()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:29:07 --> Undefined variable $userId
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:39:46 --> Undefined variable $username
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:40:05 --> Undefined variable $username
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:40:07 --> Undefined variable $username
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:41:28 --> Undefined variable $session
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:42:57 --> Undefined array key "firstName"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:45:54 --> Undefined array key "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:46:55 --> Undefined array key "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:46:56 --> Undefined array key "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:47:15 --> Undefined array key "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 15:47:34 --> Undefined array key "username"
+in APPPATH/Views/template/navbar.php on line 60.
+ 1 APPPATH/Views/template/navbar.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/navbar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Career.php(19): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Career->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 16:06:09 --> Undefined variable $message
+in APPPATH/Views/template/message.php on line 12.
+ 1 APPPATH/Views/template/message.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Login.php(56): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->resetPassword()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 21:33:39 --> Undefined variable $user
+in APPPATH/Views/profile.php on line 12.
+ 1 APPPATH/Views/profile.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/profile.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Profile.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Profile->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 21:58:34 --> Undefined variable $ession
+in APPPATH/Controllers/Login.php on line 34.
+ 1 APPPATH/Controllers/Login.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->check_login()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:17:31 --> Call to undefined method App\Controllers\Settings::valdidate()
+in APPPATH/Controllers/Settings.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:18:16 --> Call to undefined method App\Controllers\Settings::valdidate()
+in APPPATH/Controllers/Settings.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:26:48 --> Array to string conversion
+in APPPATH/Controllers/Settings.php on line 55.
+ 1 APPPATH/Controllers/Settings.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:27:02 --> Undefined variable $validation
+in APPPATH/Controllers/Settings.php on line 55.
+ 1 APPPATH/Controllers/Settings.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:27:58 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH/Controllers/Settings.php on line 55.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:32:33 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH/Controllers/Settings.php on line 55.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:33:55 --> Undefined variable $data
+in APPPATH/Controllers/Settings.php on line 54.
+ 1 APPPATH/Controllers/Settings.php(54): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:50:14 --> Undefined variable $email
+in APPPATH/Controllers/Settings.php on line 42.
+ 1 APPPATH/Controllers/Settings.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:51:40 --> Cannot use object of type stdClass as array
+in APPPATH/Controllers/Settings.php on line 49.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:56:40 --> Undefined array key "confirmPassword"
+in APPPATH/Controllers/Settings.php on line 49.
+ 1 APPPATH/Controllers/Settings.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:58:38 --> Undefined variable $fiels
+in APPPATH/Controllers/Settings.php on line 49.
+ 1 APPPATH/Controllers/Settings.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-27 23:58:49 --> Too few arguments to function App\Models\UserModel::updateUser(), 1 passed in /var/www/htdocs/alumni/app/Controllers/Settings.php on line 72 and exactly 2 expected
+in APPPATH/Models/UserModel.php on line 75.
+ 1 APPPATH/Controllers/Settings.php(72): App\Models\UserModel->updateUser()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Settings->update()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
