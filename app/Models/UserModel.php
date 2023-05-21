@@ -11,7 +11,7 @@ class UserModel extends Model {
 
     protected $allowedFields = [
         'id', 'firstName', 'lastName', 'email', 'password', 'created_at',
-        'token', 'activate', 'resume_file',
+        'token', 'activate', 'resume_file', 'picture_file',
         'connection_token'
     ];
 
@@ -48,6 +48,22 @@ class UserModel extends Model {
         // the returned id can be used to create a session 
     }
 
+    public function updateUser($id, $data)
+    {
+        $this->db->table($this->table)
+            ->where('id', $id)
+            ->update($data);
+    }
+
+    public function deleteUser($email)
+    {
+        $this->db->table($this->table)
+            ->where($this->primaryKey, $email)
+            ->delete();
+    }
+
+
+    // Registration 
     public function generateToken() 
     {
         $token = bin2hex(random_bytes(25));
@@ -74,20 +90,8 @@ class UserModel extends Model {
         return $user;
     }
 
-    public function updateUser($email, $data)
-    {
-        $this->db->table($this->table)
-            ->where($this->primaryKey, $email)
-            ->update($data);
-    }
-
-    public function deleteUser($email)
-    {
-        $this->db->table($this->table)
-            ->where($this->primaryKey, $email)
-            ->delete();
-    }
-
+    
+    // Login
     public function checkUser($email, $password) 
     {
         $user = $this->db->table($this->table)
@@ -106,24 +110,6 @@ class UserModel extends Model {
         }
     }
 
-    public function checkUserWithConnectionToken($remember_token) {
-        list($id, $token) = explode(':', $remember_token);
-        $user = $this->db->table($this->table)
-                    ->where('id', $id)
-                    ->where('connection_token', $token)
-                    ->get()
-                    ->getRow();
-        if($user){
-            /* $newToken = bin2hex(random_bytes(16));
-            $this->db->table($this->table)
-                    ->where('id', $id)
-                    ->update(array('connection_token' => $newToken)); 
-            return $user; */
-        } else {
-            return false;
-        }
-    }
-
     public function checkActivation($email) 
     {
         $user = $this->db->table($this->table)
@@ -133,6 +119,7 @@ class UserModel extends Model {
         return $user->activate;
     }
 
+    // Reset password 
     public function checkToken($token) 
     {
         $user = $this->db->table($this->table)
