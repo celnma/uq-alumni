@@ -17,10 +17,7 @@ class Login extends BaseController {
         // Check if the remember token is present in the cookie
         if (isset($_COOKIE['auth_token'])) {
             $model = new UserModel();
-            /* $user = $model->checkUserWithConnectionToken($_COOKIE['auth_token']);
-            if($user) {*/ 
-                return redirect()->to(base_url('dashboard'));
-            // };
+            return redirect()->to(base_url('dashboard'));
         } else {
             echo view('template/header');
             echo view('login', $data);

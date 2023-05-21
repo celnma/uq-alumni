@@ -13,7 +13,35 @@ class Register extends BaseController {
         echo view('template/footer');
     }
 
+    private function sendPostRequest($url, $postData)
+    {
+        $curl = \Config\Services::curlrequest();
+        return $curl->setBody(http_build_query($postData))
+            ->post($url)
+            ->getBody();
+    }
+
     public function save() {
+        // Check captcha 
+        $session = session();
+        
+        $recaptchaResponse = $this->request->getPost('g-recaptcha-response');
+        $secretKey = '6LeGXR0mAAAAADxI3ITPpuHcOsG5z_GoQ-Audlmi'; // Replace with your reCAPTCHA secret key
+        
+        $verificationUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        $postData = [
+            'secret' => $secretKey,
+            'response' => $recaptchaResponse,
+            'remoteip' => $this->request->getIPAddress()
+        ];
+        
+        $verificationResult = $this->sendPostRequest($verificationUrl, $postData);
+        $verificationData = json_decode($verificationResult);
+        
+        if (!$verificationData->success) {
+            return redirect()->to(base_url('signup'))->with('error', 'reCAPTCHA verification failed.');
+        };
+
         $rules = [
             'firstName'=>'required|max_length[25]',
             'lastName'=>'required|max_length[25]',
