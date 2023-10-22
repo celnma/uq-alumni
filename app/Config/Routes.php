@@ -42,23 +42,41 @@ $routes->post('/login/reset_password', 'Login::sentEmailPassword');
 $routes->get('/user/reset/(:any)', 'Login::setNewPassword/$1');
 $routes->post('/user/update_password', 'Login::updatePassword');
 
+
 // Create an account 
 $routes->get('/signup', 'Register::index');
 $routes->post('/signup/save', 'Register::save');
 $routes->get('/user/activate/(:any)', 'Register::activate_account/$1');
 
-
+// Job search 
 $routes->get('/dashboard', 'Dashboard::index');
+$routes->get('/dashboard/fetch', 'Dashboard::fetch');
+$routes->get('/dashboard/offer/(:any)', 'Dashboard::view_offer/$1');
 
-$routes->get('/events', 'Event::index');
-$routes->get('/contact', 'Contact::index');
+
+// Offer view 
+$routes->post('/offer/comment/(:any)', 'Offer::addComment/$1');
+$routes->post('/offer/like/(:any)', 'Offer::likeOffer/$1');
+$routes->post('/offer/remove_like/(:any)', 'Offer::removeLike/$1');
+$routes->post('/offer/add_favourite/(:any)', 'Offer::addFavourite/$1');
+$routes->post('/offer/remove_favourite/(:any)', 'Offer::removeFavourite/$1');
+
+// Favourites 
+$routes->get('/favourites', 'Favourite::index');
 
 $routes->get('/career', 'Career::index');
-$routes->get('/career/add_offer_form', 'Career::add_offer_form');
+$routes->get('/career/add_offer_form', 'Career::new_offer_form');
 $routes->post('/career/add_offer_form/save', 'Offer::add_offer');
 
+$routes->get('/offer/apply/(:any)', 'Career::application_form/$1');
+
+$routes->post('/offer/apply/submit/(:any)', 'Offer::submit_application/$1');
+
 $routes->get('/settings', 'Settings::index');
+$routes->post('/settings/update_picture', 'Settings::update_picture');
 $routes->post('/settings/update', 'Settings::update');
+$routes->get('/settings/view_file/(:any)', 'Settings::preview/$1');
+$routes->get('/settings/download/(:any)', 'Settings::download/$1');
 
 
 

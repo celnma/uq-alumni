@@ -1,4 +1,4 @@
-<div class="container p-5">
+<div class="container mx-auto p-5">
      <div class="container">
         <div class="row p-3 m-2">
 				
